@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/results"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+		<TextView
+        android:id="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="To use the moon time calculator application enter the elongation based on the moon&apos;s phase and then enter its position based on where it appears in the sky."
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textTitle"
+        android:text="Elongation"
+        android:textSize="17dp" />
+
+    <EditText
+        android:id="@+id/editElongation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:ems="10"
+        android:inputType="number" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textAppearance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editElongation"
+        android:layout_marginLeft="29dp"
+        android:layout_toRightOf="@+id/textView1"
+        android:text="Appearance In Sky"
+        android:textSize="17dp" />
+
+    <EditText
+        android:id="@+id/editAppearance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editElongation"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/editElongation"
+        android:ems="10"
+        android:hint="highsky, ineast,setting, etc." />
+
+    <TextView
+        android:id="@+id/textDirection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/editAppearance"
+        android:layout_marginRight="20dp"
+        android:text="Direction "
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textDirection"
+        android:layout_centerVertical="true" >
+
+        <RadioButton
+            android:id="@+id/east"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="East"
+            android:textSize="15dp" />
+
+        <RadioButton
+            android:id="@+id/west"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="West"
+            android:textSize="15dp" />
+
+        <RadioButton
+            android:id="@+id/FullMoon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Full Moon"
+            android:textSize="15dp" />
+
+        <RadioButton
+            android:id="@+id/NewMoon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="New Moon"
+            android:textSize="15dp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnResults"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:gravity="center_horizontal"
+        android:text="Calculate" />
+
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnResults"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="22dp"
+        android:gravity="left|center_horizontal"
+        android:text="Return" />
+
+    <ImageView
+        android:id="@+id/imgResults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignTop="@+id/textDirection"
+        android:layout_toLeftOf="@+id/textDirection"
+        android:cropToPadding="false"
+        android:src="@drawable/blank" />
+    
+</RelativeLayout>
